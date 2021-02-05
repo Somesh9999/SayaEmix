@@ -5,11 +5,11 @@ const productRoutes=require('./routes/product');
 const path=require('path');
 const app= express();
 
-/*mongoose.connect("mongodb+srv://somesh:"+process.env.MONGO_ATLAS_PW+"@cluster0.immmq.mongodb.net/shivoham?retryWrites=true&w=majority").then(()=>{
+mongoose.connect("mongodb+srv://somesh:"+process.env.MONGO_ATLAS_PW+"@cluster0.fn5lq.mongodb.net/sayaemix?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
   console.log("Connected Successfully");
 }).catch(()=>{
   console.log("Connection Failed");
-});*/
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
@@ -21,7 +21,8 @@ app.use((req,res,next)=>{
   next();
 });
 
-app.use("/images",express.static(path.join(__dirname,"backend/upload"))); //Used to provide access to images folder of our backend folder
+app.use("/images",express.static(path.join(__dirname,"backend/compressed"))); //Used to provide access to images folder of our backend folder
+app.use("/videos",express.static(path.join(__dirname,"backend/compressed")));
 
 app.use("/start",(req,res,next)=>{
   res.status(200).json({message:"Sever Started"});
