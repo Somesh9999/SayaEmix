@@ -1,0 +1,77 @@
+/*Home Banner*/
+.home-banner{
+  width: 100%;
+  position: relative;
+}
+
+.home-banner img{
+  z-index: 1;
+}
+
+/*Media Queries*/
+
+@media (max-width: 576px) {
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 320px) {
+  .home-banner{
+    height: 300px;
+  }
+
+  .home-banner .home-banner-quote{
+    height: 70px;
+    width: 50%;
+    transform: translateX(50%);
+    border: solid 2px white;
+  }
+
+  .home-banner .home-banner-quote h3{
+    font-size: 3vw;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 768px) {
+  .home-banner{
+    height: 500px;
+  }
+  .home-banner .home-banner-quote{
+    height: 90px;
+  }
+  .home-banner .home-banner-quote h3{
+    font-size: 2vw;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1440px) {
+  .home-banner{
+    height: 800px;
+  }
+  .home-banner .home-banner-quote{
+    height: 115px;
+    font-size: 1.5vw;
+  }
+  .home-banner .home-banner-quote h3{
+    height: 100px;
+    font-size: 1.5vw;
+    line-height: 33px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .home-banner{
+    height: 1000px;
+  }
+  .home-banner .home-banner-quote{
+    height: 115px;
+    font-size: 1.2vw;
+  }
+  .home-banner .home-banner-quote h3{
+    height: 100px;
+    font-size: 1.2vw;
+    line-height: 33px;
+  }
+}

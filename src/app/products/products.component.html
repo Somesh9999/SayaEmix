@@ -1,0 +1,19 @@
+<div class="row" id="product-list">
+  <div class="col-12">
+    <div class="container">
+      <div class="row row-cols-2 row-cols-sm-2  row-cols-md-3 g-4 mt-2">
+        <div class="col" *ngFor="let product of products">
+          <a [routerLink]="['/product-details',product.id]" class="text-decoration-none">
+            <div class="card text-center text-light" style="width: 100%;" >
+              <div class="product-overlay"></div>
+              <img [src]="product.image" class="card-img-top" alt="...">
+              <div class="card-body bg-dark">
+                <p class="card-text mb-lg-4">{{product.name}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

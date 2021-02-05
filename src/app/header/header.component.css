@@ -1,0 +1,160 @@
+.container{
+  position:relative;
+  height: 100%;
+}
+
+.container-fluid{
+  width: 100vw;
+}
+
+.navbar{
+  height: 75px;
+}
+
+.main-menu{
+  position: relative;
+}
+
+.navbar-brand{
+  width: 230px;
+  transform: translateY(-18%);
+}
+
+.mb-logo{
+  width: 55%;
+  height: 65%;
+}
+
+nav .nav-link{
+    font-family: "Brandon Bold",Helvetica,Arial,sans-serif;
+    color: #000;
+    letter-spacing: 1.25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+nav .nav-link:hover, .user-icon-dropdown-content a:hover, fa-icon:hover{
+  color: #3466c1;
+  cursor: pointer;
+}
+
+nav .nav-link:active, .user-icon-dropdown-content a::after{
+  color: #3466c1;
+  border-bottom-color: #3466c1;
+}
+
+nav .nav-link::after,.user-icon-dropdown-content a::after{
+  display:block;
+  content: '';
+  border-bottom: solid 3px #3466c1;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+nav .nav-link:hover::after, .user-icon-dropdown-content a:hover::after{
+  transform: scaleX(1);
+}
+
+/*Icons*/
+nav .icons{
+  position: absolute;
+  display: inline-block;
+  right: 12%;
+  font-size: 125%;
+  width: 20%;
+  height: 100%;
+}
+
+fa-icon{
+  display: inline-block;
+  padding-left: 10%;
+}
+
+.user-icon-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f9fa;
+  top: 100%;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+  transform: translateX(-35%);
+}
+
+.user-icon-dropdown-content a {
+  color: black;
+  padding: 6% 10%;
+  text-decoration: none;
+  display: block;
+  font-size: 72%;
+  width: 75%;
+  margin: 0 auto;
+
+}
+
+.user-icon-cover{
+  display: inline-block;
+  height: 100%;
+}
+
+.user-icon-cover:hover .user-icon-dropdown-content {display: block;}
+
+/* Drop Down*/
+.nav-dropdown{
+  display: flex;
+  width: 700px;
+  height: 394px;
+  margin: 0 20% ;
+  left: 0;
+  top: calc(100%-1px);
+  position: absolute;
+  color: white;
+  text-align: center;
+  transform: scale(0);
+  transition: 0.8s
+}
+
+.nav-dropdown img{
+  height: 100%;
+  width: 100%;
+}
+
+.trending-product-dropdown{
+  height: 100%;
+}
+
+#products:hover .nav-dropdown{
+  transform: scale(1);
+}
+
+/*Media Queries*/
+
+/*Extra Small devices (tablets, 768px and up)*/
+@media (max-width: 576px) {}
+
+/*Small devices (tablets, 768px and up)*/
+@media (min-width: 576px) {}
+
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .mb-logo{
+    width: 40%;
+    height: 75%;
+  }
+}
+
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1400px) {
+  .navbar-brand{
+    width: 250px;
+  }
+}
+
